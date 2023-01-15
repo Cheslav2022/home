@@ -1,0 +1,699 @@
+@font-face {
+	font-family: 'VantaLight';
+	src: url('../fonts/ofont.ru_VantaLight.eot');
+	src: local('☺'), url('../fonts/ofont.ru_VantaLight.woff') format('woff'), url('../fonts/ofont.ru_VantaLight.ttf') format('truetype'), url('../fonts/ofont.ru_VantaLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Vanta';
+	src: url('../fonts/ofont.ru_Vanta.eot');
+	src: local('☺'), url('../fonts/ofont.ru_Vanta.woff') format('woff'), url('../fonts/ofont.ru_Vanta.ttf') format('truetype'), url('../fonts/ofont.ru_Vanta.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    max-height: 100%;
+    overflow-x: hidden;
+    background-color: #FFFFFF;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container {
+    max-width: 1630px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+    text-decoration: none;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.38px;
+}
+
+a {
+    color: #363431;
+}
+
+
+.row_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.menu_mobile {
+    display: none;
+}
+
+.header_logo {
+    margin-right: 108px;
+}
+
+.four_links {
+    display: flex;
+    gap: 56px;
+    margin-right: 118px;
+
+}
+
+.price_mobile {
+    display: none;
+}
+
+.contact {
+    margin-right: 56px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.address {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'VantaLight';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+/* main */
+
+.main {
+    background-image: url('../image/Rectangle 2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 840px;
+    color: #FFFFFF;
+}
+
+
+.col_main {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 {
+    font-family: 'VantaLight';
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 72.8px;
+    text-align: center;
+    margin-top: 144px;
+    margin-bottom: 40px;
+}
+
+.line {
+    width: 120px;
+    height: 2px;
+    background-color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.name_studios {
+    font-family: 'VantaLight';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24.57px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.one-click-buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 64px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    background: transparent;
+    color: #FFFFFF;
+    font-family: 'VantaLight';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18.43px;
+    margin-bottom: 144px;
+    text-decoration: none;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s opacity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(27, 28, 33, 0.6);
+  }
+  
+  .popup:target {
+    visibility: visible;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    border-radius: 16px;
+  }
+  
+  .overlay {
+      position: absolute;
+      inset: 0;
+  }
+  
+  .popup-close {
+      position: absolute;
+      top: -28px;
+      right: 0px;
+  }
+  
+  .one-click-buy-popup-content {
+      padding: 72px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 512px;
+      width: 100%;
+  }
+  
+  .section-subtitle {
+      font-family: 'Vanta';
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38.4px;
+      margin-bottom: 48px;
+  }
+  
+  .one-click-buy-popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+      margin-bottom: 24px;
+  }
+  
+  .form-control {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: 'VantaLight';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+  }
+  
+  .form-control input {
+      border-radius: 4px;
+      font-family: 'VantaLight';
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      padding: 12px 20px;
+      border: 0.5px solid #B2B2B2;
+  }
+  
+  .form-button {
+      border: 1px solid #74B900;
+      border-radius: 8px;
+      font-family: 'VantaLight';
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      color: #74B900;
+      padding: 13px 75px;
+      background-color: #FFFFFF;
+  }
+  
+  .section-description {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'VantaLight';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-bottom: 40px;
+  }
+
+/* about */
+
+.about_title {
+    font-family: 'Vanta';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 46.13px;
+    text-align: center; 
+    margin-top: 176px;
+    color: #363431;
+}
+
+.row_about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.about p {
+    font-family: 'VantaLight';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center; 
+    margin-top: 32px;
+    color: #363431;
+}
+
+
+/* help */
+
+.help_title {
+    font-family: 'Vanta';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 62.4px;
+    text-align: center; 
+    margin-top: 176px;
+    color: #363431; 
+    margin-top: 176px;
+    margin-bottom: 80px;
+}
+
+.help_content_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+
+}
+
+.help_content_left {
+    background-image: url('../image/Rectangle 5.png');
+    width: 649px;
+    height: 608px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 48px;
+}
+
+.help_content_right_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.help_content_right_top {
+    background-image: url('../image/Rectangle 8.png');
+    height: 288px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 48px;
+}
+
+.help_content_right_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.help_content_right_bottom_left {
+    background-color: #C6C6C6;
+    width: 308px;
+    height: 288px;
+    text-align: center;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.help_content_right_bottom_right {
+    background-color: #C7DF9E;
+    width: 308px;
+    height: 288px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.help p {
+    color: #FFFFFF;
+}
+
+.card_1 {
+    font-family: 'Vanta';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36.4px;
+}
+
+.card_2 {
+    font-family: 'Vanta';
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 36.4px;
+}
+
+.card_3 {
+    font-family: 'Vanta';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28.6px;
+}
+
+.card_4 {
+    font-family: 'Vanta';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28.6px;
+}
+
+
+
+/* stocks */
+
+.stocks {
+    background-color: #F3F3F3;
+    margin-top: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stocks_title {
+    font-family: 'Vanta';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 46.13px;
+    text-align: center; 
+    color: #363431; 
+    margin-bottom: 80px;
+    margin-top: 176px;
+}
+
+.stocks_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.stocks_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+.image_body {
+    background-image: url('../image/image_body.png');
+    width: 648px;
+    height: 424px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.stocks_content_right {
+    width: 648px;
+}
+
+.stocks_content_right_title {
+    font-family: 'Vanta';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 41.6px; 
+    color: #363431; 
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+
+.stocks_content_right_description {
+    font-family: 'VantaLight';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.6px; 
+    color: #363431; 
+    margin-bottom: 24px;
+}
+
+.price {
+    color: #74B900;
+    margin-bottom: 32px;
+}
+
+.price_1 {
+    font-family: 'Vanta';
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 54.4px;  
+}
+
+.price_2 {
+    font-family: 'Vanta';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.6px; 
+}
+
+.stocks a {
+    font-family: 'Vanta';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30.6px; 
+    color: #363431; 
+    text-decoration: none;
+    border-bottom: 1px solid #363431;
+    padding-bottom: 5px;
+}
+
+
+.slider_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 176px;
+}
+
+.slider_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 512px;
+    width: 100%;     
+}
+
+.arrow-left {
+    width: 64px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-right {
+    width: 64px;
+    height: 64px;
+    background-color: #FFFFFF;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_active {
+    width: 16px;
+    height: 16px;
+    background-color: #363431;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.button_note {
+    width: 16px;
+    height: 16px;
+    background-color: #AEACAA;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    margin-left: 24px;
+}
+
+
+/* footer */
+
+.footer {
+    box-shadow: 0px -2px 5px rgb(0 0 0 / 10%);
+    padding-top: 1px;
+}
+
+.row_footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 80px;  
+    row-gap: 40px;  
+}
+
+.footer_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.38px;
+    color: #363431;
+}
+
+.social_links {
+    margin: 40px 0px 24px;
+}
+
+.copyright {
+    color: #828282;
+}
+
+.footer_about_title {
+    margin-bottom: 16px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.38px;
+    color: #363431;
+}
+
+.footer_about_description {
+    margin-bottom: 8px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    color: #363431;   
+}
+
+.footer_about_description_bottom {
+    margin-bottom: 8px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #363431;
+}
+
+.news_title {
+    margin-bottom: 16px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16.38px;
+    color: #363431;
+}
+
+.news_description {
+    margin-bottom: 32px;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    color: #363431;
+}
+
+.footer_input {
+    margin-bottom: 64px;
+    display: flex;
+}
+
+.politics {
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    color: #828282;
+}
+
+.footer_button {
+    width: 104px;
+    height: 48px;
+    border: none;
+    background-color: #74B900;
+    color: #FFFFFF;
+    font-family: 'VantaLight';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.2px;
+    text-align: center;
+    margin-left: -5px;
+}
+
+.footer_input_form {
+    width: 272px;
+    height: 48px;
+    background-color: #F3F3F3;
+    border: none;
+}
+
+::placeholder {
+    padding-left: 16px;
+    font-family: 'VantaLight';
+    font-size: 14px;
+    font-weight: 400;
+    color: #AEACAA;
+}
+
